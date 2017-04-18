@@ -13,6 +13,7 @@
 		C00F7E461EA499F700A114B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00F7E441EA499F700A114B6 /* LaunchScreen.storyboard */; };
 		C00F7E4E1EA49B4A00A114B6 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F7E4D1EA49B4A00A114B6 /* ImageViewerViewController.swift */; };
 		C00F7E541EA49BFA00A114B6 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F7E531EA49BFA00A114B6 /* FlickrAPI.swift */; };
+		C00F7E581EA4C69E00A114B6 /* FlickrMethodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F7E571EA4C69E00A114B6 /* FlickrMethodButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C00F7E471EA499F700A114B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00F7E4D1EA49B4A00A114B6 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		C00F7E531EA49BFA00A114B6 /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		C00F7E571EA4C69E00A114B6 /* FlickrMethodButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrMethodButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,8 @@
 				C00F7E4F1EA49B6600A114B6 /* Controllers */,
 				C00F7E521EA49B8E00A114B6 /* Utility */,
 				C00F7E3B1EA499F700A114B6 /* AppDelegate.swift */,
-				C00F7E3F1EA499F700A114B6 /* Main.storyboard */,
 				C00F7E421EA499F700A114B6 /* Assets.xcassets */,
-				C00F7E441EA499F700A114B6 /* LaunchScreen.storyboard */,
 				C00F7E471EA499F700A114B6 /* Info.plist */,
-				C00F7E4D1EA49B4A00A114B6 /* ImageViewerViewController.swift */,
 			);
 			path = FlickrImageViewer;
 			sourceTree = "<group>";
@@ -73,6 +72,7 @@
 		C00F7E4F1EA49B6600A114B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C00F7E4D1EA49B4A00A114B6 /* ImageViewerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -88,6 +88,8 @@
 		C00F7E511EA49B8300A114B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C00F7E561EA4C68200A114B6 /* Custom Classes */,
+				C00F7E551EA4B09200A114B6 /* Storyboards */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -97,6 +99,23 @@
 			children = (
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		C00F7E551EA4B09200A114B6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C00F7E3F1EA499F700A114B6 /* Main.storyboard */,
+				C00F7E441EA499F700A114B6 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C00F7E561EA4C68200A114B6 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C00F7E571EA4C69E00A114B6 /* FlickrMethodButton.swift */,
+			);
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +194,7 @@
 				C00F7E541EA49BFA00A114B6 /* FlickrAPI.swift in Sources */,
 				C00F7E4E1EA49B4A00A114B6 /* ImageViewerViewController.swift in Sources */,
 				C00F7E3C1EA499F700A114B6 /* AppDelegate.swift in Sources */,
+				C00F7E581EA4C69E00A114B6 /* FlickrMethodButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,24 +8,52 @@
 
 import Foundation
 
+
+enum FlickrMethod: String {
+    
+    case
+        GetPhotos = "flickr.galleries.getPhotos",
+        GetRecentPhotos = "flickr.photos.getRecent"
+    
+}
+
 // MARK: - FlickrAPI
 
 struct FlickrAPI {
     
-    enum Method: String {
-        case
-            RecentPhotos = "flickr.photos.getRecent",
-            GetPhotos = "flickr.galleries.getPhotos"
-    }
+    
+    // MARK: Method types
+    
+    
+    
+    // MARK: API Constants
     
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let APIKey = ""
     
     
-    
-    private static func flickrURL(method: Method, parameters: [String : String]?) -> URL? {
+    // MARK: API methods
+
+    static func recentPhotosURL() -> URL {
         
-        var components = URLComponents(string: baseURLString)
+        let parameters = ["extras" : "url_m,date_taken"]
+        return flickrURL(method: .GetRecentPhotos, parameters: parameters)
+        
+    }
+    
+    static func photosURL() -> URL {
+        
+        let parameters = [
+            "extras" : "url_m",
+            "galleryID" : "5704-72157622566655097"
+        ]
+        
+        return flickrURL(method: .GetPhotos, parameters: parameters)
+    }
+    
+    private static func flickrURL(method: FlickrMethod, parameters: [String : String]?) -> URL {
+        
+        var components = URLComponents(string: baseURLString)!
         var queryItems = [URLQueryItem]()
         
         let baseParameters = [
@@ -47,9 +75,9 @@ struct FlickrAPI {
             }
         }
         
-        components?.queryItems = queryItems
+        components.queryItems = queryItems
         
-        return components?.url!
+        return components.url!
         
     }
     
